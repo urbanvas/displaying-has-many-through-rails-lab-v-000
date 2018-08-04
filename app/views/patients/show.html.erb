@@ -1,6 +1,5 @@
 <ul>
   <% @patient.appointments.each do |patient| %>
-  <% binding.pry %>
     <li><%= patient.appointment_datetime.strftime("%B %d, %Y at %H:%M") %></li>
     <%= link_to patient.doctor.name, doctor_path(patient.doctor) %>
   <% end %>
